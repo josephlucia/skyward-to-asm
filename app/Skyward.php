@@ -72,8 +72,8 @@ class Skyward
                         'Content-Type' => 'application/x-www-form-urlencoded'
                     ],
                     'form_params' => [
-                        'username' => $credentials->consumer_secret,
-                        'password' => $credentials->consumer_key,
+                        'username' => $credentials->consumer_key,
+                        'password' => $credentials->consumer_secret,
                         'grant_type' => 'password'
                     ]
                 ]

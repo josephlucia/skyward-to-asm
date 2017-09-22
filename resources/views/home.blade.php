@@ -31,12 +31,12 @@
                                     <input type="text" class="form-control" id="domain" name="domain" value="{{ $credentials->domain or old('domain') }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="https://skyward.example.com">
                                 </div>
                                 <div class="form-group">
-                                    <label for="consumer_secret">Skyward Consumer Secret</label>
-                                    <input type="text" class="form-control" id="consumer_secret" name="consumer_secret" value="{{ $credentials->consumer_secret or old('consumer_secret') }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-                                </div>
-                                <div class="form-group">
                                     <label for="consumer_key">Skyward Consumer Key</label>
                                     <input type="text" class="form-control" id="consumer_key" name="consumer_key" value="{{ $credentials->consumer_key or old('consumer_key') }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                </div>
+                                <div class="form-group">
+                                    <label for="consumer_secret">Skyward Consumer Secret</label>
+                                    <input type="text" class="form-control" id="consumer_secret" name="consumer_secret" value="{{ $credentials->consumer_secret or old('consumer_secret') }}" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                                 </div>
                                 <button type="submit" class="btn btn-primary">Save API Credentials</button>
                                 @if(isset($credentials) && $credentials->valid)

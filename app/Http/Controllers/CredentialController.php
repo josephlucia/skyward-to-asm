@@ -42,8 +42,8 @@ class CredentialController extends Controller
         // Validate the request.
         $this->validate($request, [
             'domain' => 'required',
-            'consumer_secret' => 'required',
-            'consumer_key' => 'required'
+            'consumer_key' => 'required',
+            'consumer_secret' => 'required'
         ]);
         // Store the credentials in the database.
         $credentials = Credential::updateOrCreate(
@@ -51,8 +51,8 @@ class CredentialController extends Controller
         	[
         		'id' => 1,
         		'domain' => $request->domain,
-        		'consumer_secret' => $request->consumer_secret,
-        		'consumer_key' => $request->consumer_key
+        		'consumer_key' => $request->consumer_key,
+                'consumer_secret' => $request->consumer_secret
         	]
         );
         // Test the credentials.
